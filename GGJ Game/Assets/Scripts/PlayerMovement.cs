@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
 	{
 		//get player input
 		horizontalInput = Input.GetAxis("Horizontal");
@@ -32,7 +32,12 @@ public class PlayerMovement : MonoBehaviour
 		//Move the vehicle forward
 		transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
 		Vector3 forwardDirection = transform.rotation * Vector3.forward;
-		GetComponent<Rigidbody>().velocity = forwardDirection * speed * forwardInput;
+		Vector3 newVelocity = forwardDirection * speed * forwardInput;
+		newVelocity.y = GetComponent<Rigidbody>().velocity.y;
+
+
+
+		GetComponent<Rigidbody>().velocity = newVelocity;
 		//transform.Translate(Vector3.forward * speed * forwardInput);
 
 		/*if (Input.GetKeyDown(KeyCode.Space))
