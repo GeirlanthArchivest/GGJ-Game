@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
 		}
+        else
+        {
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+		}
 		
 		//transform.Translate(Vector3.forward * speed * forwardInput);
 
