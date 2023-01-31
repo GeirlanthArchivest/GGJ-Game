@@ -16,6 +16,7 @@ public class PlayerMovement2 : MonoBehaviour
 	public GameObject dungeon1;
 	public GameObject dungeon2;
 	public GameObject Player1;
+	public GameObject Gun;
 
 	Transform target;
 	NavMeshAgent agent;
@@ -51,6 +52,7 @@ public class PlayerMovement2 : MonoBehaviour
 			dungeon1.SetActive(false);
 			dungeon2.SetActive(true);
 			Player1.SetActive(false);
+			Gun.SetActive(true);
 
 		}
         else
@@ -58,6 +60,7 @@ public class PlayerMovement2 : MonoBehaviour
 			dungeon1.SetActive(true);
 			dungeon2.SetActive(false);
 			Player1.SetActive(true);
+			Gun.SetActive(false);
 			float distance = Vector3.Distance(target.position, transform.position);
 			if (distance <= lookRadius)
 			{
