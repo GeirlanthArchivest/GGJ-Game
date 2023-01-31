@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{
 		currentHealth = maxHealth;
-		//Healthbar.SetMaxHealth(maxHealth);
+		Healthbar.SetMaxHealth(maxHealth);
 
 	}
 
@@ -66,6 +68,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		currentHealth -= damage;
 		Healthbar.SetHealth(currentHealth);
+		if (currentHealth == 0)
+        {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		} 
 	}
 
 
