@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement2 : MonoBehaviour
 {
 	private float speed = 20;
 	private float turnSpeed = 50;
@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	private float forwardInput;
 	public int maxHealth = 100;
 	public int currentHealth;
-	public GameObject Camera1;
+	public GameObject Camera2;
 
 	//public Healthbar Healthbar;
 
@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-	{
-		if (Camera1.activeSelf)
-		{
+	{ 
+		if (Camera2.activeSelf)
+        {
 			//get player input
 			horizontalInput = Input.GetAxis("Horizontal");
 			forwardInput = Input.GetAxis("Vertical");
@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
 		}
+
+		//Move the vehicle forward
 		
 		//transform.Translate(Vector3.forward * speed * forwardInput);
 

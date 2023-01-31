@@ -7,6 +7,12 @@ public class CameraControl : MonoBehaviour
     public GameObject cam1;
     public GameObject cam2;
 
+    void Start()
+    {
+        cam1.SetActive(true);
+        cam2.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
