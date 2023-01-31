@@ -35,10 +35,9 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Else Initiated");
+            UpdateDestination();
             if (Vector3.Distance(transform.position, target2) < 4)
             {
-                Debug.Log("Patrol reinitiated");
                 IterateWaypointIndex();
                 UpdateDestination();
             }

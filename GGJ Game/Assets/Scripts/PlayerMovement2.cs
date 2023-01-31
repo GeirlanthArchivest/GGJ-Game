@@ -13,6 +13,9 @@ public class PlayerMovement2 : MonoBehaviour
 	public int maxHealth = 100;
 	public int currentHealth;
 	public GameObject Camera2;
+	public GameObject dungeon1;
+	public GameObject dungeon2;
+	public GameObject Player1;
 
 	Transform target;
 	NavMeshAgent agent;
@@ -45,10 +48,16 @@ public class PlayerMovement2 : MonoBehaviour
 			Vector3 newDirection = forwardDirection * forwardInput * speed;
 			agent.SetDestination(transform.position + newDirection);
 
+			dungeon1.SetActive(false);
+			dungeon2.SetActive(true);
+			Player1.SetActive(false);
+
 		}
         else
         {
-
+			dungeon1.SetActive(true);
+			dungeon2.SetActive(false);
+			Player1.SetActive(true);
 			float distance = Vector3.Distance(target.position, transform.position);
 			if (distance <= lookRadius)
 			{
@@ -75,6 +84,7 @@ public class PlayerMovement2 : MonoBehaviour
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, lookRadius);
 	}
+
 
 	/*void TakeDamage(int damage)
 	{
