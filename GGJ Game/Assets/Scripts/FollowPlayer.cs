@@ -12,7 +12,7 @@ public class FollowPlayer : MonoBehaviour
 
     public GameObject player;
     public float distanceFromPlayer = 5;
-    public float height = 2;
+    public float height = 5;
     //private Vector3 offset = new Vector3(0, 2, -7);
 
 

@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	private float speed = 20;
-	private float turnSpeed = 50;
+	private float turnSpeed = 100;
 	private float horizontalInput;
 	private float forwardInput;
 	public int maxHealth = 100;
 	public int currentHealth;
 	public GameObject Camera1;
 
-	//public Healthbar Healthbar;
+	public Healthbar Healthbar;
 
 	// Start is called before the first frame update
 	void Start()
@@ -51,13 +51,22 @@ public class PlayerMovement : MonoBehaviour
 			TakeDamage(20);
 		}*/
 
+
 	}
 
-	/*void TakeDamage(int damage)
+	void OnCollisionEnter(Collision collisioninfo)
+	{
+		if (collisioninfo.collider.tag == "Enemy")
+		{
+			TakeDamage(20);
+		}
+	}
+
+	void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 		Healthbar.SetHealth(currentHealth);
-	}*/
+	}
 
 
 }

@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public Transform[] waypoints;
     int waypointsIndex;
     Vector3 target2;
+    public GameObject cam2;
 
     Transform target;
     NavMeshAgent agent;
@@ -26,6 +27,14 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cam2.activeSelf)
+        {
+            target = PlayerManager.instance.Player2.transform;
+        }
+        else
+        {
+            target = PlayerManager.instance.Player.transform;
+        }
 
         float distance2 = Vector3.Distance(target.position, transform.position);
 

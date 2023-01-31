@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class PlayerMovement2 : MonoBehaviour
 {
-	private float speed = 20;
-	private float turnSpeed = 50;
+	private float speed = 40;
+	private float turnSpeed = 100;
 	private float horizontalInput;
 	private float forwardInput;
 	public float lookRadius;
