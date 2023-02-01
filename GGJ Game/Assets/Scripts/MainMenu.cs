@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject settingsMenu;
     public GameObject mainMenuUI;
+    
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void PlayGame()
     {

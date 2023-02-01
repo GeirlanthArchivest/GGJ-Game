@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 	private float speed = 20;
-	private float turnSpeed = 100;
+	private float turnSpeed = 150;
 	private float horizontalInput;
 	private float forwardInput;
 	public int maxHealth = 100;

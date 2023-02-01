@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class PlayerMovement2 : MonoBehaviour
 {
-	private float speed = 40;
-	private float turnSpeed = 100;
+	private float speed = 20;
+	private float turnSpeed = 150;
 	private float horizontalInput;
 	private float forwardInput;
 	public float lookRadius;
@@ -44,10 +44,16 @@ public class PlayerMovement2 : MonoBehaviour
 			forwardInput = Input.GetAxis("Vertical");
 
 			//Move the vehicle forward
-			transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+			/*transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
 			Vector3 forwardDirection = transform.rotation * Vector3.forward;
 			Vector3 newDirection = forwardDirection * forwardInput * speed;
-			agent.SetDestination(transform.position + newDirection);
+			agent.SetDestination(transform.position + newDirection);*/
+			agent.enabled = false;
+			transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+			Vector3 forwardDirection = transform.rotation * Vector3.forward;
+			Vector3 newVelocity = forwardDirection * speed * forwardInput;
+			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
+			GetComponent<Rigidbody>().velocity = newVelocity;
 
 			dungeon1.SetActive(false);
 			dungeon2.SetActive(true);
@@ -57,6 +63,7 @@ public class PlayerMovement2 : MonoBehaviour
 		}
         else
         {
+			agent.enabled = true;
 			dungeon1.SetActive(true);
 			dungeon2.SetActive(false);
 			Player1.SetActive(true);
