@@ -842,6 +842,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &900192142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3461764058753693837, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+  m_PrefabInstance: {fileID: 983940333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +986,10 @@ PrefabInstance:
       propertyPath: cam2
       value: 
       objectReference: {fileID: 994525362}
+    - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 900192142}
     - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -1787,6 +1796,11 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!4 &1147076658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3461764058753693837, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+  m_PrefabInstance: {fileID: 6154545266361359675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189674780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1893,10 @@ PrefabInstance:
       propertyPath: cam2
       value: 
       objectReference: {fileID: 994525362}
+    - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 1515517218}
     - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -2138,6 +2156,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466860118}
   m_CullTransparentMesh: 1
+--- !u!4 &1515517218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3461764058753693837, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+  m_PrefabInstance: {fileID: 1334677759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534491167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2383,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 994525362}
     - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 1754175522}
+    - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 836014923}
@@ -2512,6 +2539,11 @@ Transform:
   m_Father: {fileID: 836014923}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1754175522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3461764058753693837, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+  m_PrefabInstance: {fileID: 1654535802}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1787823735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3237,10 @@ PrefabInstance:
       propertyPath: cam2
       value: 
       objectReference: {fileID: 994525362}
+    - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 1147076658}
     - target: {fileID: 6154545267007175780, guid: 369620ab9c5a716468859b14cfb630f8, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 

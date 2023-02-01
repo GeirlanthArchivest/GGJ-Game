@@ -12,6 +12,11 @@ public class EnemyController : MonoBehaviour
     Vector3 target2;
     public GameObject cam2;
     public float rotationSpeed = 30f;
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 100;
+    private float nextFire;
+    public int timer;
 
     Transform target;
     NavMeshAgent agent;
@@ -45,6 +50,12 @@ public class EnemyController : MonoBehaviour
             if (distance2 <= agent.stoppingDistance)
             {
                 RotateTowards(target);
+                if (Time.time > nextFire)
+                {
+                    nextFire += 0.4f;
+                    ++timer;
+                    ShootAt();
+                }
             }
         }
         else
@@ -78,6 +89,11 @@ public class EnemyController : MonoBehaviour
         {
             waypointsIndex = 0;
         }
+    }
+    void ShootAt()
+    {
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
     }
 
     private void RotateTowards(Transform target)
