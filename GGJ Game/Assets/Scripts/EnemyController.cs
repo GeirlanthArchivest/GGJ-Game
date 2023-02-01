@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
                 RotateTowards(target);
                 if (Time.time > nextFire)
                 {
-                    nextFire += 0.4f;
+                    nextFire += 0.6f;
                     ++timer;
                     ShootAt();
                 }
