@@ -58,13 +58,13 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnCollisionEnter(Collision collisioninfo)
 	{
-		if (collisioninfo.collider.tag == "Enemy")
+		if (collisioninfo.collider.tag == "Enemy" || collisioninfo.collider.tag == "Bullet")
 		{
 			TakeDamage(20);
 		}
 	}
 
-	void TakeDamage(int damage)
+	public void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 		Healthbar.SetHealth(currentHealth);
