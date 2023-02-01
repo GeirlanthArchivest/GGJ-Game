@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     int waypointsIndex;
     Vector3 target2;
     public GameObject cam2;
+    public float rotationSpeed = 30f;
 
     Transform target;
     NavMeshAgent agent;
@@ -41,6 +42,10 @@ public class EnemyController : MonoBehaviour
         if (distance2 <= lookRadius)
         {
             agent.SetDestination(target.position);
+            if (distance2 <= agent.stoppingDistance)
+            {
+                RotateTowards(target);
+            }
         }
         else
         {
@@ -51,7 +56,7 @@ public class EnemyController : MonoBehaviour
                 UpdateDestination();
             }
         }
-        
+
     }
 
     void OnDrawGizmosSelected()
@@ -73,5 +78,12 @@ public class EnemyController : MonoBehaviour
         {
             waypointsIndex = 0;
         }
+    }
+
+    private void RotateTowards(Transform target)
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
     }
 }
