@@ -6,15 +6,16 @@ public class DialogueButtons : MonoBehaviour
 {
     public GameObject Dialogue1;
     public GameObject Dialogue2;
-    public GameObject player2;
+    private bool GameIsPaused = false;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerManager.count == 6)
+        if (PlayerManager.count == 6 && GameIsPaused == false)
         {
             Dialogue1.SetActive(true);
+            GameIsPaused = true;
             Time.timeScale = 0f;
         }
         else if (Input.GetButtonDown("2Key"))
@@ -30,6 +31,7 @@ public class DialogueButtons : MonoBehaviour
     }
     public void dialogueBox2()
     {
+        Debug.Log("Test");
         Dialogue2.SetActive(false);
         Time.timeScale = 1f;
     }
