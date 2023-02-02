@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		currentHealth = maxHealth;
 		Healthbar.SetMaxHealth(maxHealth);
-
-
 	}
 
 

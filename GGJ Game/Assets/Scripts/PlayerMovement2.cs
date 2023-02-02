@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement2 : MonoBehaviour
 {
@@ -45,6 +47,7 @@ public class PlayerMovement2 : MonoBehaviour
 				Dialogue2.SetActive(false);
 				Dialogue1.SetActive(false);
 			}
+			
 			//get player input
 			horizontalInput = Input.GetAxis("Horizontal");
 			forwardInput = Input.GetAxis("Vertical");
