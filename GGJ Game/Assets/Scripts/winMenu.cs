@@ -9,12 +9,13 @@ public class winMenu : MonoBehaviour
     void OnTriggerEnter()
     {
         Pause();
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("WinTheme");
     }
     
     void Pause()
     {
         endMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        
     }
 }

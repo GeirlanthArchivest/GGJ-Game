@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        FindObjectOfType<AudioManager>().Play("MainTheme");
     }
 
     public void PlayGame()

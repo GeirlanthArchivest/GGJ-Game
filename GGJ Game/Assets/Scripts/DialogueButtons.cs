@@ -20,6 +20,8 @@ public class DialogueButtons : MonoBehaviour
         }
         else if (Input.GetButtonDown("2Key"))
         {
+            FindObjectOfType<AudioManager>().Stop("FutureTheme");
+            FindObjectOfType<AudioManager>().Play("PastTheme");
             dialogueBox2();
         }
     }
