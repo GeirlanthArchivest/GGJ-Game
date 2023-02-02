@@ -40,11 +40,6 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 newVelocity = forwardDirection * speed * forwardInput;
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
-			if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
-			{
-				Dialogue1.SetActive(true);
-				Time.timeScale = 0f;
-			}
 		}
 		else
 		{

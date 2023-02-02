@@ -42,11 +42,6 @@ public class PlayerMovement2 : MonoBehaviour
 	{ 
 		if (Camera2.activeSelf)
         {
-			if (GameObject.FindGameObjectsWithTag("Enemy").Length == 4)
-			{
-				Dialogue2.SetActive(false);
-				Dialogue1.SetActive(false);
-			}
 			
 			//get player input
 			horizontalInput = Input.GetAxis("Horizontal");

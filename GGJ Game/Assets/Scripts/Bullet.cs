@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public float life = 3;
-    public int count = 0;
-    public GameObject WinUI;
+    public PlayerManager PlayerManager;
 
     void Awake()
     {
@@ -19,13 +18,10 @@ public class Bullet : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
+            PlayerManager.count += 1;
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            count += 1;
-            if (count == 8)
-            {
-                WinUIEnable();
-            }
+            
         }
         else if (collision.collider.tag != "Enemy" && collision.collider.tag != "Player")
         {
@@ -33,9 +29,5 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void WinUIEnable()
-    {
-        WinUI.SetActive(true);
-        Time.timeScale = 0f;
-    }
+
 }
