@@ -17,6 +17,8 @@ public class PlayerMovement2 : MonoBehaviour
 	public GameObject dungeon2;
 	public GameObject Player1;
 	public GameObject Gun;
+	public GameObject Dialogue2;
+	public GameObject Dialogue1;
 
 	Transform target;
 	NavMeshAgent agent;
@@ -30,7 +32,6 @@ public class PlayerMovement2 : MonoBehaviour
 		//Healthbar.SetMaxHealth(maxHealth);
 		target = PlayerManager.instance.Player.transform;
 		agent = GetComponent<NavMeshAgent>();
-
 	}
 
 
@@ -39,6 +40,11 @@ public class PlayerMovement2 : MonoBehaviour
 	{ 
 		if (Camera2.activeSelf)
         {
+			if (GameObject.FindGameObjectsWithTag("Enemy").Length == 4)
+			{
+				Dialogue2.SetActive(false);
+				Dialogue1.SetActive(false);
+			}
 			//get player input
 			horizontalInput = Input.GetAxis("Horizontal");
 			forwardInput = Input.GetAxis("Vertical");
@@ -61,7 +67,7 @@ public class PlayerMovement2 : MonoBehaviour
 			Gun.SetActive(true);
 
 		}
-        else
+		else
         {
 			agent.enabled = true;
 			dungeon1.SetActive(true);

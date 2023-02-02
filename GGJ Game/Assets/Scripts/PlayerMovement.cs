@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	public int maxHealth = 100;
 	public int currentHealth;
 	public GameObject Camera1;
+	public GameObject Dialogue1;
 
 	public Healthbar Healthbar;
 
@@ -22,11 +23,12 @@ public class PlayerMovement : MonoBehaviour
 		currentHealth = maxHealth;
 		Healthbar.SetMaxHealth(maxHealth);
 
+
 	}
 
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
 	{
 		if (Camera1.activeSelf)
 		{
@@ -40,9 +42,14 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 newVelocity = forwardDirection * speed * forwardInput;
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
+			if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+			{
+				Dialogue1.SetActive(true);
+				Time.timeScale = 0f;
+			}
 		}
-        else
-        {
+		else
+		{
 			GetComponent<Rigidbody>().velocity = Vector3.zero;
 		}
 		
@@ -69,10 +76,10 @@ public class PlayerMovement : MonoBehaviour
 		currentHealth -= damage;
 		Healthbar.SetHealth(currentHealth);
 		if (currentHealth == 0)
-        {
+		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		} 
+		}
 	}
-
+	
 
 }
