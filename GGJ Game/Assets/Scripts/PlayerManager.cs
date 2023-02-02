@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject WinUI;
     public static int count;
 
     #region Singleton
@@ -18,18 +17,18 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject Player;
     public GameObject Player2;
+    public GameObject wall;
 
     void Update()
     {
-        if (count == 8)
+        if (count == 12)
         {
-            WinUIEnable();
+            wallDisable();
         }
     }
 
-    void WinUIEnable()
+    void wallDisable()
     {
-        WinUI.SetActive(true);
-        Time.timeScale = 0f;
+        wall.SetActive(false);
     }
 }

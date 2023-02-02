@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 	public int maxHealth = 100;
 	public int currentHealth;
 	public GameObject Camera1;
-	public GameObject Dialogue1;
 
 	public Healthbar Healthbar;
 

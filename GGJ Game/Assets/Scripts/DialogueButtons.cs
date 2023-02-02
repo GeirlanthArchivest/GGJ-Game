@@ -12,7 +12,12 @@ public class DialogueButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("2Key"))
+        if (PlayerManager.count == 6)
+        {
+            Dialogue1.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else if (Input.GetButtonDown("2Key"))
         {
             dialogueBox2();
         }

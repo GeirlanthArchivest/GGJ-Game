@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Bullet : MonoBehaviour
 {
     public float life = 3;
-    public PlayerManager PlayerManager;
 
     void Awake()
     {

@@ -42,7 +42,9 @@ public class PlayerMovement2 : MonoBehaviour
 	{ 
 		if (Camera2.activeSelf)
         {
-			
+			Dialogue2.SetActive(false);
+			Dialogue1.SetActive(false);
+			Time.timeScale = 1f;
 			//get player input
 			horizontalInput = Input.GetAxis("Horizontal");
 			forwardInput = Input.GetAxis("Vertical");
