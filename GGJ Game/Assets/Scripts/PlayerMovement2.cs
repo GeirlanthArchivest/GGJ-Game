@@ -62,11 +62,6 @@ public class PlayerMovement2 : MonoBehaviour
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
 
-			if (Input.GetKey(KeyCode.W))
-			{
-				FindObjectOfType<AudioManager>().Play("Footsteps");
-			}
-
 			dungeon1.SetActive(false);
 			dungeon2.SetActive(true);
 			Player1.SetActive(false);
@@ -88,17 +83,24 @@ public class PlayerMovement2 : MonoBehaviour
 
 		}
 
-		
+
 
 		//Move the vehicle forward
-		
+
 		//transform.Translate(Vector3.forward * speed * forwardInput);
 
 		/*if (Input.GetKeyDown(KeyCode.Space))
 		{
 			TakeDamage(20);
 		}*/
-
+		
+	}
+	void OnCollisionEnter(Collision collisioninfo)
+	{
+		if (collisioninfo.collider.tag == "Enemy" || collisioninfo.collider.tag == "Bullet")
+		{
+			TakeDamage(20);
+		}
 	}
 
 	void OnDrawGizmosSelected()
@@ -108,11 +110,15 @@ public class PlayerMovement2 : MonoBehaviour
 	}
 
 
-	/*void TakeDamage(int damage)
+	void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
 		Healthbar.SetHealth(currentHealth);
-	}*/
+		if(currentHealth == 0)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
+	}
 
 
 }
