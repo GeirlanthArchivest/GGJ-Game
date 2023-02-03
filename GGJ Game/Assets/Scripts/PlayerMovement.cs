@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnCollisionEnter(Collision collisioninfo)
 	{
-		if (collisioninfo.collider.tag == "Enemy" || collisioninfo.collider.tag == "Bullet")
+		if (collisioninfo.collider.tag == "Enemy" || collisioninfo.collider.tag == "Bullet" && Camera1.activeSelf)
 		{
 			TakeDamage(20);
 		}
