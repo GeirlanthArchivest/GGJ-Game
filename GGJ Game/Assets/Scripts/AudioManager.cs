@@ -25,10 +25,12 @@ public class AudioManager : MonoBehaviour
         Play("FutureTheme");
     }
 
-    public void Play (string name)
+    public void Play (string name, bool startAgain = false)
     {
         Sound s = Array.Find(Sounds, sound => sound.name == name);
-        s.source.Play();
+
+        if (startAgain || !s.source.isPlaying)
+            s.source.Play();
     }
     
     public void Stop(string name)

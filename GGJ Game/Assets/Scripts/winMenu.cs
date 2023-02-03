@@ -9,7 +9,7 @@ public class winMenu : MonoBehaviour
     void OnTriggerEnter()
     {
         Pause();
-        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Stop("PastTheme");
         FindObjectOfType<AudioManager>().Play("WinTheme");
     }
     

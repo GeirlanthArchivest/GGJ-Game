@@ -53,8 +53,8 @@ public class EnemyController : MonoBehaviour
                 if (Time.time > nextFire)
                 {
                     FindObjectOfType<AudioManager>().Play("Gun");
-                    nextFire += 0.6f;
                     ++timer;
+                    nextFire = Time.time+0.6f;
                     ShootAt();
                 }
             }
