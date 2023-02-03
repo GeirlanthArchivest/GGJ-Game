@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ee80b9d66c3aa494aae4ed24e26e6a28, type: 3}
       propertyPath: m_Name
-      value: robots
+      value: robots Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ee80b9d66c3aa494aae4ed24e26e6a28, type: 3}
       propertyPath: m_TagString
@@ -153,8 +153,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.0145187, y: 5.930876, z: 1}
-  m_Center: {x: 0.021820068, y: 2.9672527, z: 0}
+  m_Size: {x: 5.0145187, y: 8.773856, z: 1}
+  m_Center: {x: 0.021820068, y: 4.388743, z: 0}
 --- !u!95 &277194346
 Animator:
   serializedVersion: 4

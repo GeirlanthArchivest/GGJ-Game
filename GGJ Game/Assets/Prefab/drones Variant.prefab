@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97871023f625a6345b69553732d580a4, type: 3}
       propertyPath: m_Name
-      value: drones
+      value: drones Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97871023f625a6345b69553732d580a4, type: 3}
       propertyPath: m_TagString
@@ -113,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4930534, y: 2.4094067, z: 1}
-  m_Center: {x: 0.24386978, y: 1.6542683, z: 0}
+  m_Size: {x: 2.4930534, y: 5.608776, z: 1}
+  m_Center: {x: 0.24386978, y: 3.253953, z: 0}
 --- !u!95 &204212586
 Animator:
   serializedVersion: 4

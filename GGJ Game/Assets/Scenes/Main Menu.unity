@@ -480,11 +480,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 066580551334bc54f9f5057c19227cf3, type: 3}
     volume: 0.323
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: MainTheme
     clip: {fileID: 8300000, guid: abfba7e235fb7f44baf326eaede9b4dc, type: 3}
     volume: 0.323
     pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &266348090
 Transform:

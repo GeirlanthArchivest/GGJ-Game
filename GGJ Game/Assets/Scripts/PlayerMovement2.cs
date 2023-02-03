@@ -22,6 +22,8 @@ public class PlayerMovement2 : MonoBehaviour
 	public GameObject Dialogue2;
 	public GameObject Dialogue1;
 
+	public Healthbar Healthbar;
+
 	Transform target;
 	NavMeshAgent agent;
 
@@ -31,7 +33,7 @@ public class PlayerMovement2 : MonoBehaviour
 	void Start()
 	{
 		currentHealth = maxHealth;
-		//Healthbar.SetMaxHealth(maxHealth);
+		Healthbar.SetMaxHealth(maxHealth);
 		target = PlayerManager.instance.Player.transform;
 		agent = GetComponent<NavMeshAgent>();
 	}
@@ -59,6 +61,11 @@ public class PlayerMovement2 : MonoBehaviour
 			Vector3 newVelocity = forwardDirection * speed * forwardInput;
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
+
+			if (Input.GetKey(KeyCode.W))
+			{
+				FindObjectOfType<AudioManager>().Play("Footsteps");
+			}
 
 			dungeon1.SetActive(false);
 			dungeon2.SetActive(true);

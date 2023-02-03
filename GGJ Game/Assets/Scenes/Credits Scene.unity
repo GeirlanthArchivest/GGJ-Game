@@ -646,7 +646,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Macgregor Kyle - Programming/ 3D Modelling\n\n Andrew Bubb - Concept Character
     Art\n2D Animation, Wall and Floor Texture design\n\nFilipe Jeffrey - Character
-    Designer, Audio (Music and SFX), Cutscene Artist, Script Writer\n\n\n"
+    Designer, Audio (Music and SFX), Cutscene Artist, Script Writer\n\nCameron Farley
+    - Level Music and Composing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

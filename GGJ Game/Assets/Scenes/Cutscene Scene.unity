@@ -818,7 +818,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -9.267672, z: 0, w: -1.4992485}
+  m_margin: {x: 1.7858429, y: -9.267672, z: 2.2375107, w: -1.4992485}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
     looked a lot friendlier Hell I''ve been in this exact spot before
 
     MC: Friendlier?
-    not from the stories you''ve told me Pops. Anyway, if I ercall, your first story
+    not from the stories you''ve told me Pops. Anyway, if I recall, your first story
     took place'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
