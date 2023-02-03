@@ -52,6 +52,7 @@ public class EnemyController : MonoBehaviour
                 RotateTowards(target);
                 if (Time.time > nextFire)
                 {
+                    FindObjectOfType<AudioManager>().Play("Gun");
                     nextFire += 0.6f;
                     ++timer;
                     ShootAt();

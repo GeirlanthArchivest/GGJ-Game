@@ -442,21 +442,37 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 066580551334bc54f9f5057c19227cf3, type: 3}
     volume: 0.323
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: FutureTheme
     clip: {fileID: 8300000, guid: fe32952ed93d6c14493895b046cb2d8c, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: PastTheme
     clip: {fileID: 8300000, guid: ee6297554e47141468a2c29c25f0710a, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: WinTheme
     clip: {fileID: 8300000, guid: e29ab346f63a3a847b7bd96a168cf044, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gun
+    clip: {fileID: 8300000, guid: 40ba62e51dde0044a83c5e36a39de055, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: a455310045ec67f47946a4e7eac15574, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!1001 &157852040
 PrefabInstance:

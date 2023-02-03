@@ -39,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 newVelocity = forwardDirection * speed * forwardInput;
 			newVelocity.y = GetComponent<Rigidbody>().velocity.y;
 			GetComponent<Rigidbody>().velocity = newVelocity;
+			
+			if (Input.GetKey(KeyCode.W))
+            {
+				FindObjectOfType<AudioManager>().Play("Footsteps");
+			}
 		}
 		else
 		{
